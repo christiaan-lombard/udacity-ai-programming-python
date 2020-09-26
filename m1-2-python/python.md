@@ -3,20 +3,22 @@
  - [PEP8 Style Guide](https://www.python.org/dev/peps/pep-0008/)
 
 
-## Arithmetic Operators
-
-- `+` Addition
-- `-` Subtraction
-- `*` Multiplication
-- `/` Division
-- `%` Mod
-- `**` Exponentiation
-- `//` Divides and rounds down to the nearest integer
-
-See [Order of Operations](http://mathforum.org/dr.math/faq/faq.order.operations.html)
-
-
 ## Variables
+
+
+### Types
+
+| Type | Literals |
+|---|---|
+| `int` | `100` |
+| `float` | `1.2, .81, 5.` |
+| `bool` | `True, False` |
+| `string` | `'Hello', "World", """!"""` |
+| `tuple` | `(1200, 600)` |
+| `list` | `[1,2,3]` |
+
+- Get type: `type(var)` => `<class 'int'>`
+- Explicitly cast types: `int(var)`, `float(var)`,  `string(var)`, `bool(var)`
 
 
 ### Assignment
@@ -43,21 +45,20 @@ Assignment Operators:
 | `<<=` | `x <<= 5` | `x = x << 5` |
 
 
-### Types
+## Arithmetic Operators
 
-| Type | Literals |
-|---|---|
-| `int` | `100` |
-| `float` | `1.2, .81, 5.` |
-| `bool` | `True, False` |
-| `string` | `'Hello', "World", """!"""` |
+- `+` Addition
+- `-` Subtraction
+- `*` Multiplication
+- `/` Division
+- `%` Mod
+- `**` Exponentiation
+- `//` Divides and rounds down to the nearest integer
+
+See [Order of Operations](http://mathforum.org/dr.math/faq/faq.order.operations.html)
 
 
-- Get type: `type(var)` => `<class 'int'>`
-- Explicitly cast types: `int(var)`, `float(var)`,  `string(var)`, `bool(var)`
-
-
-## Comparison Operators
+### Comparison Operators
 
 | Symbol | Operation |
 |---|---|
@@ -69,7 +70,7 @@ Assignment Operators:
 | `!=` | Not Equal To |
 
 
-## Logical Operators
+### Logical Operators
 
 | Symbol | Operation |
 |---|---|
@@ -79,6 +80,8 @@ Assignment Operators:
 
 
 ## Strings
+
+Immutable ordered sequence of characters.
 
 - Declare literals with either single quotes `'` or double quotes `"`
 - Escape chars with `\`, eg. `\"`
@@ -147,3 +150,108 @@ Assignment Operators:
  - `translate()` - Returns a translated string
  - `upper()` - Converts a string into upper case
  - `zfill()` - Fills the string with a specified number of 0 values at the beginning
+
+
+## Lists
+
+Mutable ordered sequence of data/elements.
+
+- Assign list: `months = ['Jan', 'Feb', 'Mar', 'Apr', ...]` or `months = list()`
+- Access by index: `months[0]` => `'Jan'`
+- Access from the end: `months[-1]` => `'Dec'`
+- Mutate a value: `months[11] = 'Des'`
+- Mutate a slice: `months[3:4] = ['Apr', 'May']`
+- Access a subsequence/slice: `months[0:2]` or `months[:2]` => `['Jan', 'Feb']`
+- Supports `in` and `not in` operators: `'Jan' in months` => `True`
+
+### List Functions
+
+- `len(list)` - returns how many elements are in a list.
+- `max(list)` - returns the greatest element of the list. How the greatest element is determined depends on what type objects are in the list. The maximum element in a list of numbers is the largest number. The maximum elements in a list of strings is element that would occur last if the list were sorted alphabetically. This works because the the max function is defined in terms of the greater than comparison operator. The max function is undefined for lists that contain elements from different, incomparable types.
+- `min(list)` - returns the smallest element in a list. min is the opposite of max, which returns the largest element in a list.
+- `sorted(list)` - returns a copy of a list in order from smallest to largest, leaving the list unchanged.
+
+Other usefull list operations:
+
+- `string.join(list)` - join is a string method that takes a list of strings as an argument, and returns a string consisting of the list elements joined by a separator string. `"-".join(["INV", "123"])` => `'INV-123'`
+
+
+### List methods
+
+- `append()` - Adds an element at the end of the list
+- `clear()` - Removes all the elements from the list
+- `copy()` - Returns a copy of the list
+- `count()` - Returns the number of elements with the specified value
+- `extend()` - Add the elements of a list (or any iterable), to the end of the current list
+- `index()` - Returns the index of the first element with the specified value
+- `insert()` - Adds an element at the specified position
+- `pop()` - Removes the element at the specified position
+- `remove()` - Removes the first item with the specified value
+- `reverse()` - Reverses the order of the list
+- `sort()` - Sorts the list
+
+
+## Tuples
+
+Immutable ordered sequence of data/elements.
+
+- Assign tuple: `dims = (1200, 600, 32)` (brackets optional) or `dims = tuple()`
+- Unpack tuple: `length, width, depth = dims`
+- Supports all non-mutating list operators
+
+
+## Sets
+
+Immutable unordered, unique set of data/elements.
+
+- Assign a set: `thisset = set()` or `thisset = {"apple", "banana", "cherry"}`
+- Assign a set from a list: `nums = set([1,2,3,4,4])`
+- Supports `in` and `not in` operator
+- Does not support access by index, slicing
+
+> * You can use curly braces to define a set like this: {1, 2, 3}. However, if you leave the curly braces empty like this: {} Python will instead create an empty dictionary. So to create an empty set, use set().
+
+### Set methods
+
+ - `add()` - Adds an element to the set
+ - `clear()` - Removes all the elements from the set
+ - `copy()` - Returns a copy of the set
+ - `difference()` - Returns a set containing the difference between two or more sets
+ - `difference_update()` - Removes the items in this set that are also included in another, specified set
+ - `discard()` - Remove the specified item
+ - `intersection()` - Returns a set, that is the intersection of two other sets
+ - `intersection_update()` - Removes the items in this set that are not present in other, specified set(s)
+ - `isdisjoint()` - Returns whether two sets have a intersection or not
+ - `issubset()` - Returns whether another set contains this set or not
+ - `issuperset()` - Returns whether this set contains another set or not
+ - `pop()` - Removes an element from the set
+ - `remove()` - Removes the specified element
+ - `symmetric_difference()` - Returns a set with the symmetric differences of two sets
+ - `symmetric_difference_update()` - inserts the symmetric differences from this set and another
+ - `union()` - Return a set containing the union of sets
+ - `update()` - Update the set with the union of this set and others
+
+
+ ## Dictionaries
+
+Maps data in key-value pairs.
+
+- Assign a dictionary: `elements = {'hydrogen': 1, 'helium': 2}` or `elements = dict()`
+- Get a value from dictionary: `element1 = elements['hydrogen']`
+- Get a value without throwing error: `element1 = elements.get('hydrogen')`
+- A dictionary itself is mutable, but each of its individual keys must be immutable.
+
+### Dictionary methods
+
+ - `clear()` - Removes all the elements from the dictionary
+ - `copy()` - Returns a copy of the dictionary
+ - `fromkeys()` - Returns a dictionary with the specified keys and value
+ - `get()` - Returns the value of the specified key
+ - `items()` - Returns a list containing a tuple for each key value pair
+ - `keys()` - Returns a list containing the dictionary's keys
+ - `pop()` - Removes the element with the specified key
+ - `popitem()` - Removes the last inserted key-value pair
+ - `setdefault()` - Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+ - `update()` - Updates the dictionary with the specified key-value pairs
+ - `values()` - Returns a list of all the values in the dictionary
+
