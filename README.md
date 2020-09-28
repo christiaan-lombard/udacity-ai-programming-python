@@ -1,5 +1,7 @@
 # Udacity AI Programming with Python Nanodegree
 
+My Udacity *AI Programming with Python Nanodegree* course source and notes.
+
 ## Projects
 
 
