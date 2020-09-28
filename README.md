@@ -18,5 +18,6 @@
 
 ### Python Language
 - [Python Operators](https://www.programiz.com/python-programming/operators)
+- [Python Iterators](https://docs.python.org/3/tutorial/classes.html#iterators)
 - [PEP 8 Style Guide](https://www.python.org/dev/peps/pep-0008/)
 - [Python String Formatting Best Practices](https://realpython.com/python-string-formatting/)

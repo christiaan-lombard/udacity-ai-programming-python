@@ -1,5 +1,11 @@
 # Python Refresher
 
+- Python is case sensitive
+- Python is sensitive to indentation
+  - Indented code indicates inner-block
+  - Indentation must be consistent
+  - Standard indentation is 4 spaces
+
  - [PEP8 Style Guide](https://www.python.org/dev/peps/pep-0008/)
 
 
@@ -152,6 +158,50 @@ Immutable ordered sequence of characters.
  - `zfill()` - Fills the string with a specified number of 0 values at the beginning
 
 
+## Collections
+
+### Collection Functions
+
+- `len(coll)` - returns how many elements are in a list.
+- `max(coll)` - returns the greatest element of the list. How the greatest element is determined depends on what type objects are in the list. The maximum element in a list of numbers is the largest number. The maximum elements in a list of strings is element that would occur last if the list were sorted alphabetically. This works because the the max function is defined in terms of the greater than comparison operator. The max function is undefined for lists that contain elements from different, incomparable types.
+- `min(coll)` - returns the smallest element in a list. min is the opposite of max, which returns the largest element in a list.
+- `sorted(coll)` - returns a copy of a list in order from smallest to largest, leaving the list unchanged.
+
+#### Zip
+
+- `zip(list, list, ...)` - zip returns an iterator that combines multiple iterables into one sequence of tuples. Each tuple contains the elements in that position from all the iterables.
+  - `zip(['a', 'b', 'c'], [1, 2, 3])` => `(('a', 1), ('b', 2), ('c', 3))`
+  - Use to iterate lists: `for letter, num in zip(['a', 'b', 'c'], [1, 2, 3]):`
+- `zip(*list)` - unzips a list into tuples
+  - `letters, nums = zip(*(('a', 1), ('b', 2), ('c', 3)))`
+  - `letters` => `['a', 'b', 'c']`, `nums` => `[1, 2, 3]`
+
+
+#### Enumerate
+
+- `enumerate(list)` -  returns an iterator of tuples containing indices and values of a list.
+  - `enumerate(['a', 'b', 'c'])` => `((0, 'a'), (1, 'b'), (2, 'c'))`
+
+
+### List Comprehension
+
+List comprehensions allow us to create a list using a for loop in one step:
+`[{statement} for {element} in {collection}]`
+
+eg. `capitalized_cities = [city.title() for city in cities]`
+
+Add conditionals:
+
+`[{statement} for {element} in {collection} if {condition}]`
+
+eg. `squares = [x**2 for x in range(9) if x % 2 == 0]`
+
+If you would like to add else, you have to move the conditionals to the beginning of the listcomp, right after the expression.
+
+`[{statement} if {condition} else {alernative} for {element} in {collection}]`
+
+eg. `squares = [x**2 if x % 2 == 0 else x + 3 for x in range(9)]`
+
 ## Lists
 
 Mutable ordered sequence of data/elements.
@@ -163,13 +213,6 @@ Mutable ordered sequence of data/elements.
 - Mutate a slice: `months[3:4] = ['Apr', 'May']`
 - Access a subsequence/slice: `months[0:2]` or `months[:2]` => `['Jan', 'Feb']`
 - Supports `in` and `not in` operators: `'Jan' in months` => `True`
-
-### List Functions
-
-- `len(list)` - returns how many elements are in a list.
-- `max(list)` - returns the greatest element of the list. How the greatest element is determined depends on what type objects are in the list. The maximum element in a list of numbers is the largest number. The maximum elements in a list of strings is element that would occur last if the list were sorted alphabetically. This works because the the max function is defined in terms of the greater than comparison operator. The max function is undefined for lists that contain elements from different, incomparable types.
-- `min(list)` - returns the smallest element in a list. min is the opposite of max, which returns the largest element in a list.
-- `sorted(list)` - returns a copy of a list in order from smallest to largest, leaving the list unchanged.
 
 Other usefull list operations:
 
@@ -251,7 +294,88 @@ Maps data in key-value pairs.
  - `keys()` - Returns a list containing the dictionary's keys
  - `pop()` - Removes the element with the specified key
  - `popitem()` - Removes the last inserted key-value pair
- - `setdefault()` - Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+ - `setdefault(key, value)` - Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
  - `update()` - Updates the dictionary with the specified key-value pairs
  - `values()` - Returns a list of all the values in the dictionary
 
+
+## Control Structures
+
+
+### If Statement
+
+```py
+if season == 'spring':
+    print('plant the garden!')
+elif season == 'summer':
+    print('water the garden!')
+else:
+    print('unrecognized season')
+```
+
+### Falsy Values
+
+Here are most of the built-in objects that are considered False in Python:
+
+- constants defined to be false: `None` and `False`
+- zero of any numeric type: `0, 0.0, 0j, Decimal(0), Fraction(0, 1)`
+- empty sequences and collections: `"", (), [], {}, set(), range(0)`
+
+
+### For Loops
+
+`for` loops are ideal when the **number of iterations is known or finite**.
+
+- Iterate a collection (list, string, set, tuple, dictionary): `for value in values:`
+- Iterate a definite number of times: `for i in range(start,end,increment):`
+- Iterate map: `for key, value in map.items():`
+- `break` terminates a loop
+- `continue` skips one iteration of a loop
+
+
+### While Loops
+
+`while` loops are ideal when the **iterations need to continue until a condition is met**.
+
+ - Loop while condition met: `while num < end_num:`
+ - Supports `break` and `continue`
+
+
+## Functions
+
+```py
+
+# function definition
+def cylinder_volume(height, radius=5):
+    pi = 3.14159
+    return height * pi * radius ** 2
+
+```
+
+ - If there is no return statement, the function returns `None`.
+ - Arguments are optional if default is supplied
+ - Arguments can be passed by name `cylinder_volume(radius=2,height=5)`
+ - Variables declared inside a function is scoped to the function body.
+ - Variables **outside** the function can be accessed but **not modified** (throws `UnboundLocalError`).
+
+
+### Lambda Expression
+
+```py
+double = lambda x: x * 2
+```
+
+
+## Iterators and Generators
+
+*Generators are a lazy way to build iterables. They are useful when the fully realized list would not fit in memory, or when the cost to calculate each list element is high and you want to do it as late as possible. But they can only be iterated over once.* - [Stack Overflow](https://softwareengineering.stackexchange.com/questions/290231/when-should-i-use-a-generator-and-when-a-list-in-python/290235)
+
+```py
+def my_range(x):
+    i = 0
+    while i < x:
+        yield i
+        i += 1
+```
+
+See [Python docs - Iterators](https://docs.python.org/3/tutorial/classes.html#iterators)
