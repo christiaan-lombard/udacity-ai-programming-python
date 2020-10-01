@@ -27,6 +27,9 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 - [Managing Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
 - [Python 3 Module of the Week](https://pymotw.com/3/)
 - [The Python Standard Library](https://docs.python.org/3/library/)
+- [The Python Tutorial](https://docs.python.org/3/tutorial/)
+- [The Python Language and Library References](https://docs.python.org/3/index.html)
+- [IPython](https://ipython.org/ipython-doc/3/interactive/tutorial.html)
 
 ### Anaconda
 - [Conda Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)

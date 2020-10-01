@@ -476,8 +476,21 @@ with open('my_path/my_file.txt', 'r') as f:
 import useful_functions
 useful_functions.add_five([1, 2, 3, 4])
 
+# rename a module
 import useful_functions as uf
 uf.add_five([1, 2, 3, 4])
+
+# import individual objects from a module
+from collections import defaultdict, namedtuple
+
+# import an object from a module and rename it
+from module_name import object_name as new_name
+
+# import every object individually from a module (DO NOT DO THIS)
+from module_name import *
+
+# import submodule
+import package_name.submodule_name
 ```
 
 ### Main Block
@@ -490,3 +503,56 @@ To avoid running executable statements in a script when it's imported as a modul
 if __name__ == "__main__":
   print('I should not execute if imported')
 ```
+
+### Common Modules
+
+- `csv`: very convenient for reading and writing csv files
+- `collections`: useful extensions of the usual data types including OrderedDict, defaultdict and namedtuple
+- `random`: generates pseudo-random numbers, shuffles sequences randomly and chooses random items
+- `string`: more functions on strings. This module also contains useful collections of letters like string.digits (a string containing all characters which are valid digits).
+- `re`: pattern-matching in strings via regular expressions
+- `math`: some standard mathematical functions
+- `os`: interacting with operating systems
+- `os.path`: submodule of os for manipulating path names
+- `sys`: work directly with the Python interpreter
+- `json`: good for reading and writing json files (good for web work)
+
+
+## Third-Party Libraries
+
+### Install packages
+
+`pip install package_name`
+
+### Using a requirements.txt File
+
+Larger Python programs might depend on dozens of third party packages. To make it easier to share these programs, programmers often list a project's dependencies in a file called requirements.txt:
+
+```
+beautifulsoup4==4.5.1
+bs4==0.0.1
+pytz==2016.7
+requests==2.11.1
+```
+
+You can use pip to install all of a project's dependencies at once by typing `pip install -r requirements.txt` in your command line
+
+
+### Useful Third-Party Packages
+
+- [**IPython**](https://ipython.org/) - A better interactive Python interpreter
+- [**requests**](http://docs.python-requests.org/) - Provides easy to use methods to make web requests. Useful for accessing web APIs.
+- [**Flask**](http://flask.pocoo.org/) - a lightweight framework for making web applications and APIs.
+- [**Django**](https://www.djangoproject.com/) - A more featureful framework for making web applications. Django is particularly good for designing complex, content heavy, web applications.
+- [**Beautiful Soup**](https://www.crummy.com/software/BeautifulSoup/) - Used to parse HTML and extract information from it. Great for web scraping.
+- [**pytest**](http://doc.pytest.org/) - extends Python's builtin assertions and unittest module.
+- [**PyYAML**](http://pyyaml.org/wiki/PyYAML) - For reading and writing YAML files.
+- [**NumPy**](http://www.numpy.org/) - The fundamental package for scientific computing with Python. It contains among other things a powerful N-dimensional array object and useful linear algebra capabilities.
+- [**pandas**](http://pandas.pydata.org/) - A library containing high-performance, data structures and data analysis tools. In particular, pandas provides dataframes!
+- [**matplotlib**](http://matplotlib.org/) - a 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments.
+- [**ggplot**](http://ggplot.yhathq.com/) - Another 2D plotting library, based on R's ggplot2 library.
+- [**Pillow**](https://python-pillow.org/) - The Python Imaging Library adds image processing capabilities to your Python interpreter.
+- [**pyglet**](http://www.pyglet.org/) - A cross-platform application framework intended for game development.
+- [**Pygame**](http://www.pygame.org/) - A set of Python modules designed for writing games.
+- [**pytz**](http://pytz.sourceforge.net/) - World Timezone Definitions for Python
+
