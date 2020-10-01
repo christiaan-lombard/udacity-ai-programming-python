@@ -379,3 +379,114 @@ def my_range(x):
 ```
 
 See [Python docs - Iterators](https://docs.python.org/3/tutorial/classes.html#iterators)
+
+
+## Errors and Exceptions
+
+- **Syntax errors** occur when Python can’t interpret our code, since we didn’t follow the correct syntax for Python. These are errors you’re likely to get when you make a typo, or you’re first starting to learn Python.
+
+- **Exceptions** occur when unexpected things happen during execution of a program, even if the code is syntactically correct. There are different types of built-in exceptions in Python, and you can see which exception is thrown in the error message.
+
+### Common Exceptions
+
+- `KeyError` - Raised when a mapping (dictionary) key is not found in the set of existing keys.
+- `AssertionError` - Raised when an assert statement fails.
+- `IndexError` - Raised when a sequence subscript is out of range. (Slice indices are silently truncated to fall in the allowed range; if an index is not an integer, TypeError is raised.)
+- `ValueError` - Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError.
+- `TypeError` - Raised when an operation or function is applied to an object of inappropriate type. The associated value is a string giving details about the type mismatch.
+- `ZeroDivisionError` - Raised when the second argument of a division or modulo operation is zero. The associated value is a string indicating the type of the operands and the operation.
+
+[See built-in exceptions](https://docs.python.org/3/library/exceptions.html)
+
+### Try Except
+
+```py
+try:
+   # do something
+   pass
+
+except ValueError:
+   # handle ValueError exception
+   pass
+
+except (TypeError, ZeroDivisionError):
+   # handle multiple exceptions
+   # TypeError and ZeroDivisionError
+   pass
+
+except:
+   # handle all other exceptions
+   pass
+
+finally:
+  # execute regardless of exception
+
+```
+
+### Raise Exception
+
+```py
+raise ValueError("That is not a positive number!")
+```
+
+
+## Working with Files
+
+### File Modes
+- `r` - Read - Default value. Opens a file for reading, error if the file does not exist
+- `a` - Append - Opens a file for appending, creates the file if it does not exist
+- `w` - Write - Opens a file for writing, creates the file if it does not exist
+- `x` - Create - Creates the specified file, returns an error if the file exists
+
+Additional flags:
+- `t` - Text - Default value. Text mode
+- `b` - Binary - Binary mode (e.g. images)
+
+### Read Files
+
+```py
+f = open('my_path/my_file.txt', 'rt')
+file_data = f.read()
+f.close()
+```
+
+### Write Files
+
+```py
+f = open('my_path/my_file.txt', 'w')
+f.write("Hello there!")
+f.close()
+```
+
+### With
+
+This with keyword allows you to open a file, do operations on it, and automatically close it after the code block is executed.
+
+```py
+with open('my_path/my_file.txt', 'r') as f:
+    file_data = f.read()
+```
+
+
+## Import Scripts
+
+`import` followed by the name of the file, without the .py extension.
+
+```py
+import useful_functions
+useful_functions.add_five([1, 2, 3, 4])
+
+import useful_functions as uf
+uf.add_five([1, 2, 3, 4])
+```
+
+### Main Block
+
+When we run a script, Python recognizes this module as the main program, and sets the `__name__` variable for this module to the string `"__main__"`. For any modules that are imported in this script, this built-in `__name__` variable is just set to the name of that module.
+
+To avoid running executable statements in a script when it's imported as a module in another script, include these lines in an `if __name__ == "__main__"` block.
+
+```py
+if __name__ == "__main__":
+  print('I should not execute if imported')
+```
