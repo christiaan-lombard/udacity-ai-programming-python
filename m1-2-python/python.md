@@ -313,6 +313,11 @@ else:
     print('unrecognized season')
 ```
 
+Shorthand
+```py
+x = 10 if a > b else 11
+```
+
 ### Falsy Values
 
 Here are most of the built-in objects that are considered False in Python:
@@ -556,3 +561,86 @@ You can use pip to install all of a project's dependencies at once by typing `pi
 - [**Pygame**](http://www.pygame.org/) - A set of Python modules designed for writing games.
 - [**pytz**](http://pytz.sourceforge.net/) - World Timezone Definitions for Python
 
+
+## Object Oriented Programming
+
+- [class methods, instance methods, and static methods](https://realpython.com/instance-class-and-static-methods-demystified/) - these are different types of methods that can be accessed at the class or object level
+- [class attributes vs instance attributes](https://www.python-course.eu/python3_class_and_instance_attributes.php) - you can also define attributes at the class level or at the instance level
+- [multiple inheritance, mixins](https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556) - A class can inherit from multiple parent classes
+- [Python decorators](https://realpython.com/primer-on-python-decorators/) - Decorators are a short-hand way for using functions inside other functions
+
+
+```py
+class Employee:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def get_full_name(self):
+        return "%s %s" % (self.first_name, self.last_name)
+
+    def set_full_name(self, first_name, last_name):
+        this.first_name = first_name
+        this.last_name = last_name
+
+employee = Employee('Christiaan', 'Lombard')
+
+```
+
+- [Python Properties vs. Getters and Setters](https://www.python-course.eu/python3_properties.php)
+
+### Magic Methods
+
+Magic methods are not meant to be invoked directly by you, but the invocation happens internally from the class on a certain action. For example, when you add two numbers using the + operator, internally, the __add__() method will be called. - [Python - Magic Methods](https://www.tutorialsteacher.com/python/magic-methods-in-python)
+
+```py
+
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def __add__(self, other):
+        return Rectangle(self.width + other.width, self.height + other.height)
+
+    def __repr__(self):
+        return 'Rectangle %fx%f' % (self.width, self.height)
+
+```
+
+
+### Inheritance
+
+```py
+class Clothing:
+
+    def __init__(self, color, size, style, price):
+        self.color = color
+        self.size = size
+        self.style = style
+        self.price = price
+
+    def change_price(self, price):
+        self.price = price
+
+    def calculate_discount(self, discount):
+        return self.price * (1 - discount)
+
+class Shirt(Clothing):
+
+    def __init__(self, color, size, style, price, long_or_short):
+        Clothing.__init__(self, color, size, style, price)
+        self.long_or_short = long_or_short
+
+    def double_price(self):
+        self.price = 2*self.price
+
+class Pants(Clothing):
+
+    def __init__(self, color, size, style, price, waist):
+        Clothing.__init__(self, color, size, style, price)
+        self.waist = waist
+
+    def calculate_discount(self, discount):
+        return self.price * (1 - discount / 2)
+```
