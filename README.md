@@ -43,6 +43,16 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 - [Conda Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
 - [Anaconda: Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#managing-environments)
 
+### Jupyter Notebooks
+- [Jupyter Kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)
+- [Troubleshooting Jupyter](https://jupyter-notebook.readthedocs.io/en/stable/troubleshooting.html#what-to-do-when-things-go-wrong)
+- [LaTeX](https://www.latex-project.org/)
+- [LaTeX Tutorial](https://www.latex-tutorial.com/)
+- [Github markdown cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+- [Markdown Cheatsheet by Adam Pritchard](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Markdown Tutorial](https://commonmark.org/help/tutorial/)
+- [List of Jupyter Magic Commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
+
 ### Statistics
 
  - [Wikipedia Normal distribution](https://en.wikipedia.org/wiki/Normal_distribution)
