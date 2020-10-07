@@ -53,6 +53,15 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 - [Markdown Tutorial](https://commonmark.org/help/tutorial/)
 - [List of Jupyter Magic Commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
 
+
+### NumPy
+
+ - [NumPy Manual](https://docs.scipy.org/doc/numpy-1.13.0/contents.html)
+ - [NumPy User Guide](https://numpy.org/devdocs/user/index.html)
+ - [NumPy Reference](https://numpy.org/devdocs/reference/index.html)
+ - [Scipy Lectures](http://www.scipy-lectures.org/intro/numpy/index.html)
+ - [The NumPy array: a structure for efficient numerical computation](https://hal.inria.fr/inria-00564007/document)
+
 ### Statistics
 
  - [Wikipedia Normal distribution](https://en.wikipedia.org/wiki/Normal_distribution)
