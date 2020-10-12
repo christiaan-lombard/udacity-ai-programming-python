@@ -61,6 +61,8 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
  - [NumPy Reference](https://numpy.org/devdocs/reference/index.html)
  - [Scipy Lectures](http://www.scipy-lectures.org/intro/numpy/index.html)
  - [The NumPy array: a structure for efficient numerical computation](https://hal.inria.fr/inria-00564007/document)
+ - [NumPy - Basic Slicing and Indexing](https://numpy.org/devdocs/reference/arrays.indexing.html?highlight=slicing#basic-slicing-and-indexing)
+ - [NumPy - Mathematical functions](https://numpy.org/devdocs/reference/routines.math.html?highlight=arithmetic#mathematical-functions)
 
 ### Statistics
 
