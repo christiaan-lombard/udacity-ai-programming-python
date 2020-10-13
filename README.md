@@ -7,13 +7,16 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 
 ## Modules
 
-- Module 1: Introduction to AI Programming with Python
+- Module 1 and 2: Introduction to AI Programming with Python
   - Notes:
     - [Python Refresher](m1-2-python/python.md)
     - [Python Docstring](m1-2-python/python_docs.md)
-    - [Anaconda](m1-2-python/anaconda.md)
-- Module 2: Intro to Python
 - Module 3: Numpy, Pandas, Matplotlib
+  - Notes:
+    - [Anaconda](m1-2-python/anaconda.md)
+    - [Jupyter](m1-2-python/jupyter.md)
+    - [NumPy](m1-2-python/numpy.ipynb)
+    - [Pandas](m1-2-python/pandas.ipynp)
 - Module 4: Linear Algebra Essentials
 - Module 5: Neural Networks
 - Module 6: Image Classifier Project
@@ -63,6 +66,15 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
  - [The NumPy array: a structure for efficient numerical computation](https://hal.inria.fr/inria-00564007/document)
  - [NumPy - Basic Slicing and Indexing](https://numpy.org/devdocs/reference/arrays.indexing.html?highlight=slicing#basic-slicing-and-indexing)
  - [NumPy - Mathematical functions](https://numpy.org/devdocs/reference/routines.math.html?highlight=arithmetic#mathematical-functions)
+
+### Pandas
+
+ - [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+ - [Pandas Reference - Series](https://pandas.pydata.org/pandas-docs/stable/reference/series.html)
+ - [Pandas Reference - DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html)
+ - [Pandas - Intro to data structures](https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html)
+ - [10 minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html)
+
 
 ### Statistics
 
