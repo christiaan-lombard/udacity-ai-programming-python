@@ -74,7 +74,16 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
  - [Pandas Reference - DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html)
  - [Pandas - Intro to data structures](https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html)
  - [10 minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html)
+ - [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
+### Matplotlib & Seaborn
+
+- [Matplotlib Documentation](https://matplotlib.org/)
+- [Seaborn Documentation](https://seaborn.pydata.org/)
+- [Tidy Data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+- [Eager Eyes - Understanding Pie Charts](https://eagereyes.org/pie-charts)
+- [Eager Eyes - An Illustrated Tour of the Pie Chart Study Results](https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results)
+- [Datawrapper - What to Consider when Creating a Pie Chart](https://academy.datawrapper.de/article/127-what-to-consider-when-creating-a-pie-chart)
 
 ### Statistics
 
