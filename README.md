@@ -79,7 +79,9 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 ### Matplotlib & Seaborn
 
 - [Matplotlib Documentation](https://matplotlib.org/)
+- [matplotlob.pyplot functions](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html)
 - [Seaborn Documentation](https://seaborn.pydata.org/)
+- [seaborn functions](https://seaborn.pydata.org/api.html)
 - [Tidy Data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
 - [Eager Eyes - Understanding Pie Charts](https://eagereyes.org/pie-charts)
 - [Eager Eyes - An Illustrated Tour of the Pie Chart Study Results](https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results)
