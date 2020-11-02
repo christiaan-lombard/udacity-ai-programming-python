@@ -91,3 +91,8 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 
  - [Wikipedia Normal distribution](https://en.wikipedia.org/wiki/Normal_distribution)
  - [Wikipedia Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution)
+
+ ### Linear Algebra
+
+ - [Field Axioms](http://mathworld.wolfram.com/FieldAxioms.html)
+ - [Wiki - System of linear equations](https://en.wikipedia.org/wiki/System_of_linear_equations)
