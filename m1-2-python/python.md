@@ -334,6 +334,7 @@ Here are most of the built-in objects that are considered False in Python:
 - Iterate a collection (list, string, set, tuple, dictionary): `for value in values:`
 - Iterate a definite number of times: `for i in range(start,end,increment):`
 - Iterate map: `for key, value in map.items():`
+- Iterate array with index: `for i, value in enumerate(array):`
 - `break` terminates a loop
 - `continue` skips one iteration of a loop
 

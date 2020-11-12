@@ -86,6 +86,8 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 - [Eager Eyes - Understanding Pie Charts](https://eagereyes.org/pie-charts)
 - [Eager Eyes - An Illustrated Tour of the Pie Chart Study Results](https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results)
 - [Datawrapper - What to Consider when Creating a Pie Chart](https://academy.datawrapper.de/article/127-what-to-consider-when-creating-a-pie-chart)
+- [Drawing conics in Matplotlib](https://mmas.github.io/conics-matplotlib)
+- [Plotting sine and cosine](https://pythonforundergradengineers.com/plotting-sin-cos-with-matplotlib.html)
 
 ### Statistics
 
@@ -96,3 +98,10 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 
  - [Field Axioms](http://mathworld.wolfram.com/FieldAxioms.html)
  - [Wiki - System of linear equations](https://en.wikipedia.org/wiki/System_of_linear_equations)
+
+
+ ### Neural Network
+
+ - [Tensorflow Playground](https://playground.tensorflow.org/)
+ - [Wiki - Perceptron](https://en.wikipedia.org/wiki/Perceptron)
+ - [Wiki - Backpropagation](https://en.wikipedia.org/wiki/Backpropagation)
