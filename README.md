@@ -98,10 +98,15 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
 
  - [Field Axioms](http://mathworld.wolfram.com/FieldAxioms.html)
  - [Wiki - System of linear equations](https://en.wikipedia.org/wiki/System_of_linear_equations)
+ - [Khan Academy - Introduction to vectors](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra)
+ - [Khan Academy - Introduction to matrices](https://www.khanacademy.org/math/precalculus/precalc-matrices)
 
 
  ### Neural Network
 
  - [Tensorflow Playground](https://playground.tensorflow.org/)
+ - [ML Cheatsheet - Loss Functions](https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html)
  - [Wiki - Perceptron](https://en.wikipedia.org/wiki/Perceptron)
  - [Wiki - Backpropagation](https://en.wikipedia.org/wiki/Backpropagation)
+ - [Andrej Karpathy, Yes, you should understand backprop](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.vt3ax2kg9)
+ - [Andrej Karpathy, a lecture from Stanford's CS231n course](https://www.youtube.com/watch?v=59Hbtz7XgjM)
