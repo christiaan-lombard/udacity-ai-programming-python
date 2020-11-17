@@ -110,3 +110,16 @@ My Udacity *AI Programming with Python Nanodegree* course source and notes.
  - [Wiki - Backpropagation](https://en.wikipedia.org/wiki/Backpropagation)
  - [Andrej Karpathy, Yes, you should understand backprop](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.vt3ax2kg9)
  - [Andrej Karpathy, a lecture from Stanford's CS231n course](https://www.youtube.com/watch?v=59Hbtz7XgjM)
+
+ ### PyTorch
+
+  - [PyTorch Installation](https://pytorch.org/get-started/locally/)
+  - [PyTorch Docs](https://pytorch.org/docs/stable/index.html)
+  - [Torchvision Docs](https://pytorch.org/docs/stable/torchvision/)
+  - [Torchvision Datasets](https://pytorch.org/docs/stable/torchvision/datasets.html)
+  - [CUDA Toolkit Download](https://developer.nvidia.com/cuda-zone)
+
+### Data
+
+  - [Kaggle - Dogs vs Cats Images](https://www.kaggle.com/c/dogs-vs-cats)
+  - [ImageNet](http://www.image-net.org/)
